@@ -1,0 +1,13 @@
+MyDroneIntent deploy {DroneActions}
+MyDroneIntent to deploy {DroneActions}
+MyDroneIntent to power {DroneActions}
+MyDroneIntent power {DroneActions}
+MyDroneIntent {DroneActions}
+DroneMovementIntent move {DroneMovement}
+DroneMovementIntent move {DroneMovement} {DroneAllowedMovement}
+DroneMovementIntent {DroneMovement}
+updateHUD show {HudCarouselActions}
+updateHUD show the {HudCarouselActions}
+updateHUD display {HudCarouselActions}
+updateHUD display the {HudCarouselActions}
+intentNotFound {NoIntent}

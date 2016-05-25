@@ -1,0 +1,323 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>uberJARVIS</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/half-slider.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file://
+        -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+        <![endif]-->
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.terminal-0.9.3.min.js"></script>
+        <script src="js/jquery.mousewheel-min.js"></script>
+        <link href="css/jquery.terminal-0.9.3.css" rel="stylesheet"/>
+    </head><body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">uberJARVIS
+                    <img style="max-width:40px;" src="valcolabslogo_small.png">
+                </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="dashboard">
+                            <a href="#" id="dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" id="hud">HUD</a>
+                        </li>
+                        <li>
+                            <a href="#" id="systemstatus">System Status</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- Half Page Image Background Carousel Header -->
+        <header id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!-- Set the first background image using inline CSS below. -->
+                    <div class="fill">
+                        <div class="flightStatus">
+                                <table class="table table-bordered table-condensed" id="flightStatusTable">
+                                        <tr>
+                                                <td colspan=2 style="background-color: #fff; color: #1e1e1e; font-size: 14px;">Control</td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right; width: 30%">Control State</td><td id="fs_controlState"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">Fly State</td><td id="fs_flyState"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">Flying</td><td id="fs_flying"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">Battery %</td><td id="fs_batteryPercentage"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">Altitude</td><td id="fs_altitude"></td>
+                                        </tr>
+                                        <tr>
+                                                <td colspan=2 style="background-color: #fff; color: #1e1e1e; font-size: 14px;">Rotation</td>
+                                        </tr>
+                                        <tr>                   
+                                                <td style="text-align: right">frontback</td><td id="fs_frontBack"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">pitch</td><td id="fs_pitch"></td>
+                                        </tr>
+                                        <tr>
+                                                <td style="text-align: right">theta</td><td id="fs_theta"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">y</td><td id="fs_y"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">left-right</td><td id="fs_leftRight"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">roll</td><td id="fs_roll"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">phi</td><td id="fs_phi"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">x</td><td id="fs_x"></td>
+                                                                            </tr>
+                                        <tr>
+                                                <td style="text-align: right">clockwise</td><td id="fs_clockwise"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">yaw</td><td id="fs_yaw"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">psi</td><td id="fs_psi"></td>
+                                        </tr>
+                                        <tr>                                    
+                                                <td style="text-align: right">z</td><td id="fs_z"></td>
+                                        </tr>
+                                        
+                                </table>
+                        </div>                
+                    </div>
+                    <div class="carousel-caption">
+                        <h5>Mark Terminal</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- Set the second background image using inline CSS below. -->
+                    <div class="fill">
+                        <div class="hud">
+                            <center>
+                                <iframe src="http://192.168.1.73:5555" border="0" width="660" height="380" scrolling="no"></iframe>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h5>HUD [Mark 42]</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <!-- Set the third background image using inline CSS below. -->
+                    <div class="fill">
+                        <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+        </header>
+        <!-- Page Content -->
+        <div class="container">
+                <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"><div class="GaugeMeter" id="PreviewGaugeMeter_3" data-percent="100" data-text="<font style='color:White;font-size:35px;'>ON</font>" data-append="<font style='color:white'></font>" data-size="200" data-theme="Red-Green" data-back="RGBa(0,0,256)" data-width="15" data-label="Power Status" data-style="Semi" data-label_color="#FFF"></div></div>
+                        <div class="col-sm-2"><div class="GaugeMeter" id="PreviewGaugeMeter_4" data-percent="100" data-append="%" data-size="200" data-theme="LightBlue-DarkBlue" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="Mark Status" data-style="Arch" data-label_color="#FFF" data-stripe="2"></div></div>
+                        <div class="col-sm-2"><div class="GaugeMeter" id="PreviewGaugeMeter_2" data-percent="0" data-append="mm" data-size="200" data-theme="White" data-back="RGBa(0,0,0,.1)" data-animate_gauge_colors="1" data-animate_text_colors="1" data-width="15" data-label="Flight Status" data-style="Arch" data-label_color="#FFF"></div></div>
+                        <div class="col-sm-2"><div class="GaugeMeter" id="GaugeMeter_1" data-percent="67"
+    data-text="Spendings"
+    data-total="100"
+    data-used="67"
+    data-prepend=""
+    data-append="%"
+    data-size="200"
+    data-width="2"
+    data-style="Semi"
+    data-color="Blue"
+    data-back="Silver"
+    data-theme="Red-Gold-Green"
+    data-animate_gauge_colors="1"
+    data-animate_text_colors="1"
+    data-label="Paladium Toxicity"
+    data-label_color="#FFF"
+    data-stripe="2"
+></div>
+                        <div class="col-sm-2"></div>
+                </div>
+        </div>        
+        <div class="container">
+            <hr>
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>Copyright © uberJARVIS Industries 2016</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+        </div>
+        <!-- /.container -->
+
+        <script src="./guage/jquery.AshAlom.gaugeMeter-2.0.0.min.js"></script>
+        <script>
+            //Global variable to hold session variables//Need to move to cookie or other persistent method
+            var sessionsVariables = {};
+            
+            function updateCarouselSelection(index) {
+                data = index;
+                $.post( "ajax/test.html", function( data ) {
+                        alert(data);
+                        //$( ".result" ).html( data );
+                });
+            }
+            setInterval(function() {
+                        $.ajax({
+                            type:"GET",
+                            url:"http://192.168.1.72:8001/carousel",
+                            dataType:"html",
+                            success:function(data) {
+                                //alert(data);
+                                if (data === "0") { active_carousel = 0 };
+                                if (data === "1") { active_carousel = 1 };
+                                if (data === "2") { active_carousel = 2 };
+                                
+                                $("#myCarousel").carousel(active_carousel);
+                                console.log("Received data: active carousel is: " + active_carousel);
+                                //$(".carousel-caption").html(data);
+                            },
+                            error:function() {
+                                console.log("Error Connecting to Server to retrieve active carousel.");
+                            }
+                        })    
+                    } , 500);
+                
+                $(document).ready(function() {
+                   $('#myCarousel').carousel({interval:false});
+                   $('#myCarousel').carousel(0);
+        
+                   $(".GaugeMeter").gaugeMeter();
+                   
+                   $('ul.nav > li').click(function (e) {
+                        e.preventDefault();
+                        $('ul.nav > li').removeClass('active');
+                        $(this).addClass('active');                
+                   });
+                   $("#dashboard").click(function(){
+                        $("#myCarousel").carousel(0);
+                        updateCarouselSelection(0);
+                   });
+                   $("#hud").click(function(){
+                        $("#myCarousel").carousel(1);
+                        updateCarouselSelection(1);
+                   });
+                   $("#systemstatus").click(function(){
+                        $("#myCarousel").carousel(2);
+                        updateCarouselSelection(2);
+                   });
+                });
+                jQuery(function($, undefined) {
+                        markterm = $('#markTerminal').terminal(function(command, term) {
+                            if (command !== '') {
+                                /*var result = window.eval(command);
+                                if (result != undefined) {
+                                    term.echo(String(result));
+                                }
+                                */
+                                term.echo(String(command));        
+                            }
+                        }, {
+                            greetings: 'uberJarvis Mark Temrinal',
+                            name: 'markTerminal',
+                            height: 492,
+                            width: 1275,
+                            prompt: 'mark> '
+                        });
+                        //markterm.echo("mark> asdf");
+                });
+                setInterval(function() {
+                        //Function to get the current flight status
+                        $.getJSON("http://192.168.1.72:8001/flightstats", function(flightStatus) {
+                                $.each(flightStatus, function( key, val ) {
+                                   if (key === "demo") {
+                                        {} flightStatusValues = val;
+                                                $("#fs_controlState").html(flightStatusValues.controlState);
+                                                $("#fs_flyState").html(flightStatusValues.flyState);
+                                                $("#fs_batteryPercentage").html(flightStatusValues.batteryPercentage);
+                                                $("#fs_altitude").html(flightStatusValues.altitude);
+                                                {} rotation = flightStatusValues.rotation;
+                                                                $("#fs_frontBack").html(rotation.frontBack);
+                                                                $("#fs_pitch").html(rotation.pitch);
+                                                                $("#fs_theta").html(rotation.theta);
+                                                                $("#fs_y").html(rotation.y);
+                                                                $("#fs_leftRight").html(rotation.leftRight);
+                                                                $("#fs_roll").html(rotation.roll);
+                                                                $("#fs_phi").html(rotation.phi);
+                                                                $("#fs_x").html(rotation.x);
+                                                                $("#fs_clockwise").html(rotation.clockwise);
+                                                                $("#fs_yaw").html(rotation.yaw);
+                                                                $("#fs_psi").html(rotation.psi);
+                                                                $("#fs_z").html(rotation.z);
+                                   } else if (key === "droneState") {
+                                        {} droneStateValues = val;
+                                        $("#fs_flying").html(droneStateValues.flying);
+                                   }
+                                });
+                        });
+                } , 1000);
+        </script>
+        <!-- Script to Activate the Carousel -->
+        <!-- <div id="carousel">Current Carousel: No carousel has been selected</div>-->
+    
+
+</body></html>

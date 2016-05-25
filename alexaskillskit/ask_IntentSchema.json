@@ -1,0 +1,48 @@
+{
+  "intents": [
+    {
+      "intent": "MyDroneIntent",
+      "slots": [
+        {
+          "name": "DroneActions",
+          "type": "LIST_OF_ACTIONS"
+        }
+      ]
+    },
+        {
+      "intent": "DroneMovementIntent",
+      "slots": [
+        {
+          "name": "DroneMovement",
+          "type": "LIST_OF_DRONE_MOVES"
+        },
+                {
+          "name": "DroneAllowedMovement",
+          "type": "LIST_ALLOWED_DRONE_MOVEMENT"
+        }
+
+      ]
+    },
+    {
+      "intent": "updateHUD",
+      "slots": [
+        {
+          "name": "HudCarouselActions",
+          "type": "LIST_OF_HUD_CAROUSEL_ACTIONS"
+        }
+      ]
+    },
+        {
+      "intent": "intentNotFound",
+      "slots": [
+        {
+          "name": "NoIntent",
+          "type": "NoIntentActions"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

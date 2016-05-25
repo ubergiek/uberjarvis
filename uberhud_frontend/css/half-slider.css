@@ -1,0 +1,187 @@
+/*!
+ * Start Bootstrap - Half Slider HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+html,
+body {
+    height: 100%;
+    background-color: 1a1a1a;
+}
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 70%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    /*background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;*/
+    background-color: 542C0F
+}
+
+.hud {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    top: 15%;
+}
+
+footer {
+    margin: 0 0;
+    color: ffff66;
+}
+
+.navbar-brand img
+{
+    position: absolute;
+    width: 100%;
+    left: 50px;
+    top: 5px;
+    text-align: left;
+    margin: auto;
+    padding:0;
+}
+ 
+
+.h4
+{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.col-center {
+   float: none;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+
+hr
+{
+    margin: 2px;
+}
+
+.markTerminal
+{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 60px;
+    margin: 0 auto;
+}
+
+.carousel-caption
+{
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    
+}
+
+.nav-tabs {
+    margin: 5;
+    margin-bottom: -1;
+    padding: 0;
+    border: 0;    
+}
+.nav-tabs{
+
+}
+.tab-content{
+    background-color:#542C0F;
+    color:#fff;
+    padding:5px
+}
+.nav-tabs > li > a{
+  border: thin none;
+  height: 47;
+}
+.nav-tabs > li > a:hover{
+    background-color: #542C0F !important;
+    border: medium none;
+    border-radius: 2;
+    color:#fff;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: #542C0F !important;
+    color: fff;
+    border-color: #000000;
+    border-bottom: hidden;
+}
+
+.nav-tabs > li > a,
+{
+    color: fff;
+}
+
+.carousel-control
+{
+    width: 55px;
+}
+
+#flightStatusTable td
+{
+    border-color: #525252;
+    color: #fff;
+    background-color: #1a1a1a;
+    font-size: 12px;
+    padding: 1;
+}
+
+.flightStatus
+{
+    display: block;
+    position: relative;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;   
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1100px;
+  }
+}
+
+.modal-backdrop {
+   background-color: red;
+}
+
+.modal-header-danger {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d91000;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+.crosshair.img {
+    border: 0;
+    outline:none;
+}
